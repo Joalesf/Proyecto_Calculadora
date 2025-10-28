@@ -173,17 +173,7 @@
 
         private void btn_resta_Click(object sender, EventArgs e)
         {
-            {
-                if (txt_pantalla.Text == "" || nuevaOperacion)
-                {
-                    txt_pantalla.Text = "-";
-                    nuevaOperacion = false;
-                }
-                else
-                {
-                    ProcesarOperacion(2, "-");
-                }
-            }
+            ProcesarOperacion(2, "-");
         }
 
         private void btn_multiplicacion_Click(object sender, EventArgs e)
