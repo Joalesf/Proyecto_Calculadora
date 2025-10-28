@@ -267,8 +267,6 @@ namespace Proyecto1
                     break;
             }
         }
-
-        // --- MODIFICACIÓN: Guardar operación en base de datos ---
         private void GuardarOperacion(string operacionTexto, double resultado)
         {
             try
@@ -301,7 +299,6 @@ namespace Proyecto1
             if (!nuevaOperacion)
                 txt_ref.Text += valor2.ToString() + "=";
 
-            // --- NUEVO: Guardar en la base de datos ---
             GuardarOperacion(txt_ref.Text, resultado);
 
             valor1 = resultado;
@@ -330,7 +327,6 @@ namespace Proyecto1
             txt_pantalla.Clear();
         }
 
-        // --- NUEVO: Mostrar historial ---
         private void mostrarCalculos_Click(object sender, EventArgs e)
         {
             try
