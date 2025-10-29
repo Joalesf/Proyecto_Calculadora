@@ -4,8 +4,6 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 
-
-
 namespace Proyecto1
 {
     public partial class Form1 : Form
@@ -204,8 +202,6 @@ namespace Proyecto1
                 txt_ref.Text += "sqr(" + numero + ")=";
                 if (valor1 != 0 && operacion != 0)
                     valor2 = numero;
-
-
                 else
                     valor1 = numero;
                 nuevaOperacion = true;
