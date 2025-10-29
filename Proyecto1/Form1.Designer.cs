@@ -52,16 +52,17 @@
             txt_ref = new TextBox();
             textBox3 = new TextBox();
             mostrarCalculos = new Button();
+            listBox1 = new ListBox();
             SuspendLayout();
             // 
             // btn0
             // 
             btn0.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn0.ForeColor = SystemColors.ActiveCaptionText;
-            btn0.Location = new Point(82, 337);
+            btn0.Location = new Point(102, 421);
             btn0.Margin = new Padding(2);
             btn0.Name = "btn0";
-            btn0.Size = new Size(82, 43);
+            btn0.Size = new Size(102, 54);
             btn0.TabIndex = 0;
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = true;
@@ -70,10 +71,10 @@
             // btn7
             // 
             btn7.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn7.Location = new Point(1, 294);
+            btn7.Location = new Point(1, 368);
             btn7.Margin = new Padding(2);
             btn7.Name = "btn7";
-            btn7.Size = new Size(82, 43);
+            btn7.Size = new Size(102, 54);
             btn7.TabIndex = 1;
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = true;
@@ -82,10 +83,10 @@
             // btn8
             // 
             btn8.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn8.Location = new Point(82, 294);
+            btn8.Location = new Point(102, 368);
             btn8.Margin = new Padding(2);
             btn8.Name = "btn8";
-            btn8.Size = new Size(82, 43);
+            btn8.Size = new Size(102, 54);
             btn8.TabIndex = 2;
             btn8.Text = "8";
             btn8.UseVisualStyleBackColor = true;
@@ -94,10 +95,10 @@
             // btn9
             // 
             btn9.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn9.Location = new Point(164, 294);
+            btn9.Location = new Point(205, 368);
             btn9.Margin = new Padding(2);
             btn9.Name = "btn9";
-            btn9.Size = new Size(82, 43);
+            btn9.Size = new Size(102, 54);
             btn9.TabIndex = 3;
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = true;
@@ -106,10 +107,10 @@
             // btn4
             // 
             btn4.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn4.Location = new Point(1, 250);
+            btn4.Location = new Point(1, 312);
             btn4.Margin = new Padding(2);
             btn4.Name = "btn4";
-            btn4.Size = new Size(82, 43);
+            btn4.Size = new Size(102, 54);
             btn4.TabIndex = 4;
             btn4.Text = "4";
             btn4.UseVisualStyleBackColor = true;
@@ -118,10 +119,10 @@
             // btn5
             // 
             btn5.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn5.Location = new Point(82, 250);
+            btn5.Location = new Point(102, 312);
             btn5.Margin = new Padding(2);
             btn5.Name = "btn5";
-            btn5.Size = new Size(82, 43);
+            btn5.Size = new Size(102, 54);
             btn5.TabIndex = 5;
             btn5.Text = "5";
             btn5.UseVisualStyleBackColor = true;
@@ -130,10 +131,10 @@
             // btn6
             // 
             btn6.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn6.Location = new Point(164, 250);
+            btn6.Location = new Point(205, 312);
             btn6.Margin = new Padding(2);
             btn6.Name = "btn6";
-            btn6.Size = new Size(82, 43);
+            btn6.Size = new Size(102, 54);
             btn6.TabIndex = 6;
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = true;
@@ -142,10 +143,10 @@
             // btn1
             // 
             btn1.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn1.Location = new Point(1, 207);
+            btn1.Location = new Point(1, 259);
             btn1.Margin = new Padding(2);
             btn1.Name = "btn1";
-            btn1.Size = new Size(82, 43);
+            btn1.Size = new Size(102, 54);
             btn1.TabIndex = 7;
             btn1.Text = "1";
             btn1.UseVisualStyleBackColor = true;
@@ -154,10 +155,10 @@
             // btn2
             // 
             btn2.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn2.Location = new Point(82, 207);
+            btn2.Location = new Point(102, 259);
             btn2.Margin = new Padding(2);
             btn2.Name = "btn2";
-            btn2.Size = new Size(82, 43);
+            btn2.Size = new Size(102, 54);
             btn2.TabIndex = 8;
             btn2.Text = "2";
             btn2.UseVisualStyleBackColor = true;
@@ -166,10 +167,10 @@
             // btn3
             // 
             btn3.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn3.Location = new Point(164, 207);
+            btn3.Location = new Point(205, 259);
             btn3.Margin = new Padding(2);
             btn3.Name = "btn3";
-            btn3.Size = new Size(82, 43);
+            btn3.Size = new Size(102, 54);
             btn3.TabIndex = 9;
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = true;
@@ -178,10 +179,10 @@
             // btnP
             // 
             btnP.Font = new Font("Arial Rounded MT Bold", 22F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnP.Location = new Point(164, 337);
+            btnP.Location = new Point(205, 421);
             btnP.Margin = new Padding(2);
             btnP.Name = "btnP";
-            btnP.Size = new Size(82, 43);
+            btnP.Size = new Size(102, 54);
             btnP.TabIndex = 10;
             btnP.Text = ".";
             btnP.UseVisualStyleBackColor = true;
@@ -190,10 +191,10 @@
             // btn_elevar
             // 
             btn_elevar.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_elevar.Location = new Point(1, 337);
+            btn_elevar.Location = new Point(1, 421);
             btn_elevar.Margin = new Padding(2);
             btn_elevar.Name = "btn_elevar";
-            btn_elevar.Size = new Size(82, 43);
+            btn_elevar.Size = new Size(102, 54);
             btn_elevar.TabIndex = 11;
             btn_elevar.Text = "x²";
             btn_elevar.UseVisualStyleBackColor = true;
@@ -202,10 +203,10 @@
             // btn_igual
             // 
             btn_igual.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_igual.Location = new Point(246, 337);
+            btn_igual.Location = new Point(308, 421);
             btn_igual.Margin = new Padding(2);
             btn_igual.Name = "btn_igual";
-            btn_igual.Size = new Size(82, 43);
+            btn_igual.Size = new Size(102, 54);
             btn_igual.TabIndex = 12;
             btn_igual.Text = "=";
             btn_igual.UseVisualStyleBackColor = true;
@@ -214,10 +215,10 @@
             // btn_multiplicacion
             // 
             btn_multiplicacion.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_multiplicacion.Location = new Point(246, 207);
+            btn_multiplicacion.Location = new Point(308, 259);
             btn_multiplicacion.Margin = new Padding(2);
             btn_multiplicacion.Name = "btn_multiplicacion";
-            btn_multiplicacion.Size = new Size(82, 43);
+            btn_multiplicacion.Size = new Size(102, 54);
             btn_multiplicacion.TabIndex = 13;
             btn_multiplicacion.Text = "×";
             btn_multiplicacion.UseVisualStyleBackColor = true;
@@ -226,10 +227,10 @@
             // btn_resta
             // 
             btn_resta.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_resta.Location = new Point(246, 250);
+            btn_resta.Location = new Point(308, 312);
             btn_resta.Margin = new Padding(2);
             btn_resta.Name = "btn_resta";
-            btn_resta.Size = new Size(82, 43);
+            btn_resta.Size = new Size(102, 54);
             btn_resta.TabIndex = 14;
             btn_resta.Text = "-";
             btn_resta.UseVisualStyleBackColor = true;
@@ -238,10 +239,10 @@
             // btn_suma
             // 
             btn_suma.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_suma.Location = new Point(246, 294);
+            btn_suma.Location = new Point(308, 368);
             btn_suma.Margin = new Padding(2);
             btn_suma.Name = "btn_suma";
-            btn_suma.Size = new Size(82, 43);
+            btn_suma.Size = new Size(102, 54);
             btn_suma.TabIndex = 15;
             btn_suma.Text = "+";
             btn_suma.UseVisualStyleBackColor = true;
@@ -250,10 +251,10 @@
             // btn_raiz
             // 
             btn_raiz.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_raiz.Location = new Point(1, 164);
+            btn_raiz.Location = new Point(1, 205);
             btn_raiz.Margin = new Padding(2);
             btn_raiz.Name = "btn_raiz";
-            btn_raiz.Size = new Size(82, 43);
+            btn_raiz.Size = new Size(102, 54);
             btn_raiz.TabIndex = 16;
             btn_raiz.Text = "√[x]";
             btn_raiz.UseVisualStyleBackColor = true;
@@ -262,10 +263,10 @@
             // btn_clearE
             // 
             btn_clearE.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_clearE.Location = new Point(82, 164);
+            btn_clearE.Location = new Point(102, 205);
             btn_clearE.Margin = new Padding(2);
             btn_clearE.Name = "btn_clearE";
-            btn_clearE.Size = new Size(82, 43);
+            btn_clearE.Size = new Size(102, 54);
             btn_clearE.TabIndex = 17;
             btn_clearE.Text = "CE";
             btn_clearE.UseVisualStyleBackColor = true;
@@ -274,10 +275,10 @@
             // btn_clear
             // 
             btn_clear.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_clear.Location = new Point(164, 164);
+            btn_clear.Location = new Point(205, 205);
             btn_clear.Margin = new Padding(2);
             btn_clear.Name = "btn_clear";
-            btn_clear.Size = new Size(82, 43);
+            btn_clear.Size = new Size(102, 54);
             btn_clear.TabIndex = 18;
             btn_clear.Text = "C";
             btn_clear.UseVisualStyleBackColor = true;
@@ -286,10 +287,10 @@
             // btn_division
             // 
             btn_division.Font = new Font("Arial Rounded MT Bold", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_division.Location = new Point(246, 164);
+            btn_division.Location = new Point(308, 205);
             btn_division.Margin = new Padding(2);
             btn_division.Name = "btn_division";
-            btn_division.Size = new Size(82, 43);
+            btn_division.Size = new Size(102, 54);
             btn_division.TabIndex = 19;
             btn_division.Text = "÷";
             btn_division.UseVisualStyleBackColor = true;
@@ -297,46 +298,61 @@
             // 
             // txt_pantalla
             // 
-            txt_pantalla.Location = new Point(1, 134);
+            txt_pantalla.BackColor = SystemColors.Window;
+            txt_pantalla.BorderStyle = BorderStyle.None;
+            txt_pantalla.Location = new Point(1, 177);
             txt_pantalla.Margin = new Padding(2);
             txt_pantalla.Name = "txt_pantalla";
-            txt_pantalla.Size = new Size(327, 27);
+            txt_pantalla.Size = new Size(409, 24);
             txt_pantalla.TabIndex = 20;
             txt_pantalla.TextAlign = HorizontalAlignment.Right;
             txt_pantalla.TextChanged += textBox1_TextChanged;
             // 
             // txt_ref
             // 
-            txt_ref.Location = new Point(1, 69);
+            txt_ref.BorderStyle = BorderStyle.None;
+            txt_ref.Location = new Point(0, 153);
             txt_ref.Margin = new Padding(2);
             txt_ref.Name = "txt_ref";
-            txt_ref.Size = new Size(327, 27);
+            txt_ref.Size = new Size(410, 24);
             txt_ref.TabIndex = 21;
             txt_ref.TextAlign = HorizontalAlignment.Right;
             txt_ref.TextChanged += textBox2_TextChanged;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(255, 104);
+            textBox3.Location = new Point(319, 130);
             textBox3.Margin = new Padding(2);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(1, 27);
+            textBox3.Size = new Size(0, 31);
             textBox3.TabIndex = 22;
             // 
             // mostrarCalculos
             // 
-            mostrarCalculos.Location = new Point(164, -1);
+            mostrarCalculos.Location = new Point(205, 0);
+            mostrarCalculos.Margin = new Padding(4);
             mostrarCalculos.Name = "mostrarCalculos";
-            mostrarCalculos.Size = new Size(164, 35);
+            mostrarCalculos.Size = new Size(205, 52);
             mostrarCalculos.TabIndex = 0;
             mostrarCalculos.Text = "Mostrar Calculos";
             mostrarCalculos.Click += mostrarCalculos_Click;
             // 
+            // listBox1
+            // 
+            listBox1.BorderStyle = BorderStyle.None;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 25;
+            listBox1.Location = new Point(1, 53);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(409, 100);
+            listBox1.TabIndex = 23;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(328, 382);
+            ClientSize = new Size(410, 478);
+            Controls.Add(listBox1);
             Controls.Add(mostrarCalculos);
             Controls.Add(textBox3);
             Controls.Add(txt_ref);
@@ -363,7 +379,7 @@
             Controls.Add(btn0);
             Margin = new Padding(2);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Calculadora";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -395,5 +411,6 @@
         private TextBox txt_ref;
         private TextBox textBox3;
         private Button mostrarCalculos;
+        private ListBox listBox1;
     }
 }

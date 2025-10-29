@@ -23,7 +23,7 @@ namespace Proyecto1
 
         private void btn0_Click(object sender, EventArgs e)
         {
-            if (nuevaOperacion && operacion == 0)
+            if (nuevaOperacion)
             {
                 txt_pantalla.Clear();
                 txt_ref.Clear();
@@ -36,7 +36,7 @@ namespace Proyecto1
 
         private void btn1_Click(object sender, EventArgs e)
         {
-            if (nuevaOperacion && operacion == 0)
+            if (nuevaOperacion)
             {
                 txt_pantalla.Clear();
                 txt_ref.Clear();
@@ -49,7 +49,7 @@ namespace Proyecto1
 
         private void btn2_Click(object sender, EventArgs e)
         {
-            if (nuevaOperacion && operacion == 0)
+            if (nuevaOperacion)
             {
                 txt_pantalla.Clear();
                 txt_ref.Clear();
@@ -62,7 +62,7 @@ namespace Proyecto1
 
         private void btn3_Click(object sender, EventArgs e)
         {
-            if (nuevaOperacion && operacion == 0)
+            if (nuevaOperacion)
             {
                 txt_pantalla.Clear();
                 txt_ref.Clear();
@@ -75,7 +75,7 @@ namespace Proyecto1
 
         private void btn4_Click(object sender, EventArgs e)
         {
-            if (nuevaOperacion && operacion == 0)
+            if (nuevaOperacion)
             {
                 txt_pantalla.Clear();
                 txt_ref.Clear();
@@ -88,7 +88,7 @@ namespace Proyecto1
 
         private void btn5_Click(object sender, EventArgs e)
         {
-            if (nuevaOperacion && operacion == 0)
+            if (nuevaOperacion)
             {
                 txt_pantalla.Clear();
                 txt_ref.Clear();
@@ -101,7 +101,7 @@ namespace Proyecto1
 
         private void btn6_Click(object sender, EventArgs e)
         {
-            if (nuevaOperacion && operacion == 0)
+            if (nuevaOperacion)
             {
                 txt_pantalla.Clear();
                 txt_ref.Clear();
@@ -114,7 +114,7 @@ namespace Proyecto1
 
         private void btn7_Click(object sender, EventArgs e)
         {
-            if (nuevaOperacion && operacion == 0)
+            if (nuevaOperacion)
             {
                 txt_pantalla.Clear();
                 txt_ref.Clear();
@@ -127,7 +127,7 @@ namespace Proyecto1
 
         private void btn8_Click(object sender, EventArgs e)
         {
-            if (nuevaOperacion && operacion == 0)
+            if (nuevaOperacion)
             {
                 txt_pantalla.Clear();
                 txt_ref.Clear();
@@ -140,7 +140,7 @@ namespace Proyecto1
 
         private void btn9_Click(object sender, EventArgs e)
         {
-            if (nuevaOperacion && operacion == 0)
+            if (nuevaOperacion)
             {
                 txt_pantalla.Clear();
                 txt_ref.Clear();
@@ -174,6 +174,13 @@ namespace Proyecto1
 
         private void btn_resta_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_pantalla.Text))
+            {
+                txt_pantalla.Text = "0";
+                ProcesarOperacion(2, "-");
+                return;
+            }
+
             ProcesarOperacion(2, "-");
         }
 
@@ -189,16 +196,20 @@ namespace Proyecto1
 
         private void btn_elevar_Click(object sender, EventArgs e)
         {
-            if (txt_pantalla.Text == "") return;
-            double numero = double.Parse(txt_pantalla.Text);
-            numero = Math.Pow(numero, 2);
-            txt_pantalla.Text = numero.ToString();
-            txt_ref.Text += "sqr(" + numero + ")";
-            if (valor1 != 0 && operacion != 0)
-                valor2 = numero;
-            else
-                valor1 = numero;
-            nuevaOperacion = true;
+            {
+                if (txt_pantalla.Text == "") return;
+                double numero = double.Parse(txt_pantalla.Text);
+                numero = Math.Pow(numero, 2);
+                txt_pantalla.Text = numero.ToString();
+                txt_ref.Text += "sqr(" + numero + ")=";
+                if (valor1 != 0 && operacion != 0)
+                    valor2 = numero;
+
+
+                else
+                    valor1 = numero;
+                nuevaOperacion = true;
+            }
         }
 
         private void btn_raiz_Click(object sender, EventArgs e)
@@ -213,7 +224,7 @@ namespace Proyecto1
             }
             numero = Math.Sqrt(numero);
             txt_pantalla.Text = numero.ToString();
-            txt_ref.Text += "√(" + numero1 + ")";
+            txt_ref.Text += "√(" + numero1 + ")=";
             if (valor1 != 0 && operacion != 0)
                 valor2 = numero;
             else
@@ -292,6 +303,18 @@ namespace Proyecto1
 
         private void btn_igual_Click(object sender, EventArgs e)
         {
+
+            if (operacion == 0 && !string.IsNullOrEmpty(txt_ref.Text))
+            {
+                if (!txt_ref.Text.EndsWith("="))
+                    txt_ref.Text += "=";
+
+                double resultadoMostrar = double.Parse(txt_pantalla.Text);
+                GuardarOperacion(txt_ref.Text, resultadoMostrar);
+                nuevaOperacion = true;
+                return;
+            }
+
             if (txt_pantalla.Text == "" && valor2 == 0) return;
             if (!nuevaOperacion)
                 valor2 = double.Parse(txt_pantalla.Text);
@@ -330,30 +353,21 @@ namespace Proyecto1
 
         private void mostrarCalculos_Click(object sender, EventArgs e)
         {
-            try
+
+            SqlConnection conexion = new SqlConnection(connectionString);
+            conexion.Open();
+
+            SqlCommand comando = new SqlCommand("SELECT * FROM Historial ORDER BY Fecha DESC", conexion);
+            comando.CommandType = CommandType.Text;
+            SqlDataReader reader = comando.ExecuteReader();
+            listBox1.Items.Clear();
+            while (reader.Read())
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
-                {
-                    con.Open();
-                    string sql = "SELECT * FROM Historial ORDER BY Fecha DESC";
-                    using (SqlCommand cmd = new SqlCommand(sql, con))
-                    {
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            string historial = "";
-                            while (reader.Read())
-                            {
-                                historial += $"{reader["Fecha"]}: {reader["Operacion"]}{reader["Resultado"]}\n";
-                            }
-                            MessageBox.Show(historial == "" ? "No hay operaciones guardadas" : historial, "Historial de operaciones");
-                        }
-                    }
-                }
+                listBox1.Items.Add($"{reader["Fecha"]}: {reader["Operacion"]}{reader["Resultado"]}\n");
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al mostrar historial: " + ex.Message);
-            }
+
+            conexion.Close();
+
         }
     }
 }
