@@ -4,6 +4,10 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 
+//José Sánchez
+//Abdias Rueda
+//Calculadora con historial en base de datos SQL Server
+
 namespace Proyecto1
 {
     public partial class Form1 : Form
